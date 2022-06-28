@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf_i.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/27 10:51:45 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/27 15:25:15 by fesper-s         ###   ########.fr       */
+/*   Created: 2022/06/28 12:56:35 by fesper-s          #+#    #+#             */
+/*   Updated: 2022/06/28 12:57:34 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include "./libft/libft.h"
+int	ft_printf_i(int i)
+{
+	char	*str;
 
-int	ft_printf(const char *, ...);
-
-#endif
+	str = ft_itoa(i);
+	ft_putstr_fd(str, 1);
+	return (ft_strlen(str));
+}

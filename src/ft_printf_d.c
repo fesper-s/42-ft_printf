@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_printf_d.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/27 10:52:00 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/28 12:40:34 by fesper-s         ###   ########.fr       */
+/*   Created: 2022/06/28 12:54:01 by fesper-s          #+#    #+#             */
+/*   Updated: 2022/06/28 12:56:17 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
-int	ft_printf(const char *format, ...)
+int	ft_printf_d(int	d)
 {
-	int		i;
-	int		len;
-	va_list	ap;
+	char	*str;
 
-	va_start(ap, format);
-	i = 0;
-	while (format[i] != '\0')
-	{
-		if (format[i] == '%' && ft_strchr("cspdiuxX%", format[1]))
-			len += ft_printf_con(ap, &format[i++]);
-		else
-		{
-			ft_putchar_fd(format[i], 1);
-			len++;
-		}
-		i++;
-	}
-	return (len);
+	str = ft_itoa(d);
+	ft_putstr_fd(str, 1);
+	return (ft_strlen(str));
 }
