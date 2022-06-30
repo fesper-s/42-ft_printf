@@ -6,13 +6,13 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 12:46:12 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/28 12:46:54 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/06/30 14:04:43 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_c(char c)
+int	ft_printf_c(int c)
 {
 	ft_putchar_fd(c, 1);
 	return (1);

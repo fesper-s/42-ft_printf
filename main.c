@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 11:04:19 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/28 11:47:03 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/06/30 14:27:10 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 
 int	main(void)
 {
-	int	len;
-
-	len = ft_printf("Eu amo chocolate %d");
-	printf("\n%d\n", len);
+	int				len;
+	unsigned int	teste;
+	
+	teste = 666;
+	len = ft_printf("Eu %% amo %i chocolate\n", teste);
+	printf("%d\n", len);
 	return (0);
 }
