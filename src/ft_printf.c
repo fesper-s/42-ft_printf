@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 10:52:00 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/30 14:28:04 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/07/01 07:38:43 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_printf(const char *format, ...)
 	i = 0;
 	while (format[i] != '\0')
 	{
-		if (format[i] == '%' && ft_strchr("cspdiuxX%", format[i+1]))
+		if (format[i] == '%' && ft_strchr("cspdiuxX%", format[i + 1]))
 		{
 			len += ft_printf_selection(ap, format, i + 1);
 			i++;
@@ -57,4 +57,3 @@ int	ft_printf_selection(va_list ap, const char *format, int i)
 		len += ft_printf_c('%');
 	return (len);
 }
-

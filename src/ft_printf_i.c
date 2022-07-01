@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 12:56:35 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/28 12:57:34 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/07/01 08:17:46 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@ int	ft_printf_i(int i)
 
 	str = ft_itoa(i);
 	ft_putstr_fd(str, 1);
+	free(str);
 	return (ft_strlen(str));
 }
