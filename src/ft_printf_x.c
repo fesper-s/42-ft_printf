@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_ud.c                                     :+:      :+:    :+:   */
+/*   ft_printf_x.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 12:58:31 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/07/01 14:35:34 by fesper-s         ###   ########.fr       */
+/*   Created: 2022/07/01 09:47:47 by fesper-s          #+#    #+#             */
+/*   Updated: 2022/07/01 14:52:32 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_count(int i, long nbr)
+static int	ft_count(int len, unsigned int nbr)
 {
-	if (nbr == 0)
-		i++;
-	while (nbr != 0)
+	if (!nbr)
+		len++;
+	while (nbr)
 	{
-		nbr = nbr / 10;
-		i++;
+		nbr /= 16;
+		len++;
 	}
-	return (i);
+	return (len);
 }
 
-static char	*ft_putstr(int i, long nbr, char *str)
+static char	*ft_putstr(int i, unsigned int nbr, char *str)
 {
 	str[i] = 0;
 	if (nbr == 0)
@@ -64,11 +64,11 @@ static char	*ft_uitoa(unsigned int n)
 	return (str);
 }
 
-int	ft_printf_ud(unsigned int ud)
+int	ft_printf_x(unsigned int x)
 {
 	char	*str;
 
-	str = ft_uitoa(ud);
+	str = ft_uitoa(x);
 	ft_putstr_fd(str, 1);
 	free(str);
 	return (ft_strlen(str));

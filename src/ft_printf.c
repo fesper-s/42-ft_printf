@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/27 10:52:00 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/07/01 07:38:43 by fesper-s         ###   ########.fr       */
+/*   Created: 2022/07/01 14:37:54 by fesper-s          #+#    #+#             */
+/*   Updated: 2022/07/01 14:38:04 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,9 @@ int	ft_printf_selection(va_list ap, const char *format, int i)
 	else if (format[i] == 'i')
 		len += ft_printf_i(va_arg(ap, int));
 	else if (format[i] == 'u')
-		len += ft_printf_ud(va_arg(ap, int));
+		len += ft_printf_ud(va_arg(ap, unsigned int));
+	else if (format[i] == 'x')
+		len += ft_printf_x(va_arg(ap, unsigned int));
 	else if (format[i] == '%')
 		len += ft_printf_c('%');
 	return (len);

@@ -5,7 +5,7 @@ C_FLAGS	= -Wall -Werror -Wextra
 HEADER	= ./include
 
 SRCS	= ./src/ft_printf.c ./src/ft_printf_c.c ./src/ft_printf_s.c ./src/ft_printf_d.c \
-		  ./src/ft_printf_i.c ./src/ft_printf_ud.c
+		  ./src/ft_printf_i.c ./src/ft_printf_ud.c ./src/ft_printf_x.c
 
 OBJS	= $(SRCS:.c=.o)
 
