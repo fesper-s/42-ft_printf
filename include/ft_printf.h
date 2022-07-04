@@ -24,5 +24,6 @@ int	ft_printf_d(int d);
 int	ft_printf_i(int i);
 int	ft_printf_ud(unsigned int ud);
 int	ft_printf_x(unsigned int x);
+int	ft_printf_xu(unsigned int xu);
 
 #endif

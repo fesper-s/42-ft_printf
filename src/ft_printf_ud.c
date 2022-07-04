@@ -46,20 +46,9 @@ static char	*ft_uitoa(unsigned int n)
 	i = 0;
 	i = ft_count(i, n);
 	nbr = (unsigned long) n;
-	if (nbr < 0)
-	{
-		nbr = nbr * -1;
-		str = malloc((++i + 1) * sizeof(char));
-		if (str == 0)
-			return (0);
-		str[0] = '-';
-	}
-	else
-	{
-		str = malloc((i + 1) * sizeof(char));
-		if (str == 0)
-			return (0);
-	}
+	str = malloc((i + 1) * sizeof(char));
+	if (str == 0)
+		return (0);
 	str = ft_putstr(i, nbr, str);
 	return (str);
 }
@@ -67,9 +56,11 @@ static char	*ft_uitoa(unsigned int n)
 int	ft_printf_ud(unsigned int ud)
 {
 	char	*str;
+	int		len;
 
 	str = ft_uitoa(ud);
 	ft_putstr_fd(str, 1);
+	len = ft_strlen(str);
 	free(str);
-	return (ft_strlen(str));
+	return (len);
 }

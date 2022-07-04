@@ -55,6 +55,8 @@ int	ft_printf_selection(va_list ap, const char *format, int i)
 		len += ft_printf_ud(va_arg(ap, unsigned int));
 	else if (format[i] == 'x')
 		len += ft_printf_x(va_arg(ap, unsigned int));
+	else if (format[i] == 'X')
+		len += ft_printf_xu(va_arg(ap, unsigned int));
 	else if (format[i] == '%')
 		len += ft_printf_c('%');
 	return (len);

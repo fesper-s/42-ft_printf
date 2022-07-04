@@ -15,9 +15,11 @@
 int	ft_printf_i(int i)
 {
 	char	*str;
+	int		len;
 
 	str = ft_itoa(i);
 	ft_putstr_fd(str, 1);
+	len = ft_strlen(str);
 	free(str);
-	return (ft_strlen(str));
+	return (len);
 }

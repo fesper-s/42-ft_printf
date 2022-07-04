@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "./include/ft_printf.h"
 #include <stdio.h>
 
 int	main(void)
@@ -19,9 +19,9 @@ int	main(void)
 	int	len;
 	int	len2;
 
-	nbr = 422;
-	len = ft_printf("%x\n", nbr);
-	len2 = printf("%x\n", nbr);
+	nbr = 127;
+	len = ft_printf("%X\n", nbr);
+	len2 = printf("%X\n", nbr);
 	printf("len = %d\nlen2 = %d\n", len, len2);
 	return (0);
 }

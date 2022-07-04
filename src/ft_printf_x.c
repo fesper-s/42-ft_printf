@@ -35,9 +35,12 @@ int	ft_printf_x(unsigned int x)
 	len = len_hex(x);
 	if (x >= 16)
 	{
-		ft_printf(x / 16);
-		x = x % 16;
+		ft_printf_x(x / 16);
+		ft_printf_x(x % 16);
 	}
-	ft_printf_c(x + 48);
+	else if (x < 10)
+		ft_printf_c(x + 48);
+	else
+		ft_printf_c(x - 10 + 97);
 	return (len);
 }
