@@ -28,6 +28,5 @@ fclean:		clean
 			make fclean -C ./libft
 
 re:			fclean all
-			make re -C ./libft
 
 .PHONY:		all clean fclean re

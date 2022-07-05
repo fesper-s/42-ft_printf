@@ -6,13 +6,13 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 09:47:47 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/07/04 14:00:36 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/07/05 09:54:46 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	len_hex(unsigned int nbr)
+static int	len_hex(unsigned long nbr)
 {
 	int	len;
 
@@ -27,7 +27,7 @@ static int	len_hex(unsigned int nbr)
 	return (len);
 }
 
-int	ft_printf_x(unsigned int x)
+int	ft_printf_x(unsigned long x)
 {
 	int	len;
 
