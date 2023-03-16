@@ -2,7 +2,7 @@
 This project I recoded printf function. Learned what is and how to implement variadic functions.
 
 ## Usage
-`make` and compile ft_printf.a with your code.
+`make` and compile libftprintf.a with your code.
 
 Example:
 ```c
